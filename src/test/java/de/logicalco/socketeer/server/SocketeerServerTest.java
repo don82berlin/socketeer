@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 public class SocketeerServerTest {
 
     @Test(dataProvider = "invalidArgsProvider", expectedExceptions = {IllegalArgumentException.class, NullPointerException.class})
-    public void testInvalidArgs(Integer port, Integer maxSessions, CommandHandler commandHandler, Charset charset) {
+    public void testInvalidCreation(Integer port, Integer maxSessions, CommandHandler commandHandler, Charset charset) {
         new SocketeerServer(port, maxSessions, commandHandler, charset);
     }
 
@@ -45,7 +45,5 @@ public class SocketeerServerTest {
     public void testWithSecurityHandlerNegative() {
         new SocketeerServer(8080, 5, mock(CommandHandler.class), StandardCharsets.UTF_8).withSecurityHandler(null);
     }
-
-
 
 }

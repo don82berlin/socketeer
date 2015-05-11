@@ -5,6 +5,6 @@ package de.logicalco.socketeer.server;
  */
 public class SocketeerServerIT {
 
-    //TODO test start stop
+    //TODO test start stop and withSecurityHandler
 
 }
