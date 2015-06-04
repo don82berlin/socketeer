@@ -12,6 +12,8 @@
   <properties>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
+    <additionalparam>-Xdoclint:none</additionalparam>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -54,4 +56,11 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>local</id>
+      <url>file://${user.home}/.m2/repository</url>
+    </repository>
+  </distributionManagement>
 </project>
