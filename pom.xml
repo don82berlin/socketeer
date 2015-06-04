@@ -11,8 +11,8 @@
   <url>https://github.com/don82berlin/socketeer</url>
 
   <properties>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
   <dependencies>
@@ -45,4 +45,14 @@
       <version>1.9.5</version>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>external.atlassian.jgitflow</groupId>
+        <artifactId>jgitflow-maven-plugin</artifactId>
+        <version>1.0-m4.3</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
