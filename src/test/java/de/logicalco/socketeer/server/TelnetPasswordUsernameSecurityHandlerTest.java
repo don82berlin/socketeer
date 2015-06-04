@@ -1,7 +1,6 @@
 package de.logicalco.socketeer.server;
 
 import com.google.common.base.Optional;
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
