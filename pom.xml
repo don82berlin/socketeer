@@ -60,7 +60,7 @@
   <distributionManagement>
     <repository>
       <id>local</id>
-      <url>file:///~/.m2/repository</url>
+      <url>${user.home}/.m2/repository</url>
     </repository>
   </distributionManagement>
 </project>
