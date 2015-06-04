@@ -57,9 +57,10 @@
     </plugins>
   </build>
 
-  <scm>
-    <url>https://github.com/don82berlin/socketeer</url>
-    <connection>scm:git:git://github.com/don82berlin/socketeer.git</connection>
-    <developerConnection>scm:git:git@github.com:don82berlin/socketeer.git</developerConnection>
-  </scm>
+  <distributionManagement>
+    <repository>
+      <id>local</id>
+      <url>file:///~/.m2/repository/</url>
+    </repository>
+  </distributionManagement>
 </project>
