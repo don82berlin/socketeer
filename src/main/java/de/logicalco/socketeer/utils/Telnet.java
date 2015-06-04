@@ -99,6 +99,7 @@ public enum Telnet {
      * @return      Bytewiese command chain.
      */
     public static byte[] buildCmdChain(Telnet...cmds) {
+        checkNotNull(cmds, "Cmds cannot be null");
         final byte[] bytes = new byte[cmds.length];
         for(int i=0;i<cmds.length;i++) {
             final Telnet cmd = cmds[i];
@@ -115,6 +116,7 @@ public enum Telnet {
      * @return      Telnet array.
      */
     public static Telnet[] readCmdChain(int...codes) {
+        checkNotNull(codes, "Codes cannot be null.");
         final Telnet[] cmds = new Telnet[codes.length];
         for(int i=0;i<codes.length;i++) {
             final Optional<Telnet> cmd = Telnet.forCode(codes[i]);
@@ -134,6 +136,7 @@ public enum Telnet {
      * @return      String representation of the given commans codes.
      */
     public static String cmdChainToString(int...codes) {
+        checkNotNull(codes, "Codes cannot be null.");
         final Telnet[] cmds = readCmdChain(codes);
         final StringWriter writer = new StringWriter();
         for(int i=0; i<cmds.length;i++) {
